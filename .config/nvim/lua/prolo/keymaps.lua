@@ -15,8 +15,6 @@ keymap("n", "<A-j>", "<C-w>j", opts)
 keymap("n", "<A-k>", "<C-w>k", opts)
 keymap("n", "<A-l>", "<C-w>l", opts)
 
-keymap("n", "<leader>e", ":Lex 30<cr>", opts)
-
 -- Resize with arrows
 keymap("n", "<C-Up>", ":resize -2<CR>", opts)
 keymap("n", "<C-Down>", ":resize +2<CR>", opts)
@@ -24,8 +22,8 @@ keymap("n", "<C-Left>", ":vertical resize -2<CR>", opts)
 keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 
 -- Buffers navigation
-keymap("n", "<S-h>", ":bnext<CR>", opts)
-keymap("n", "<S-l>", ":bprevious<CR>", opts)
+keymap("n", "<S-h>", ":bprevious<CR>", opts)
+keymap("n", "<S-l>", ":bnext<CR>", opts)
 
 -- Quit insert mode faster
 keymap("i", "jk", "<ESC>", opts)
@@ -55,4 +53,10 @@ keymap(
   opts
 )
 keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
+
+-- NvimTree
+keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
+
+-- Gitsigns
+keymap("n", "gh", ":Gitsigns preview_hunk<cr>", opts)
 

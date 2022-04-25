@@ -44,10 +44,17 @@ return packer.startup(function(use)
   -- Colorschemes
   use "lunarvim/colorschemes"
 
-  -- Base stuff
+  -- General stuff
   use "wbthomason/packer.nvim"
   use "nvim-lua/popup.nvim"
   use "nvim-lua/plenary.nvim"
+  use "windwp/nvim-autopairs"
+  use "kyazdani42/nvim-web-devicons"
+  use "kyazdani42/nvim-tree.lua"
+  use "akinsho/bufferline.nvim"
+  use "moll/vim-bbye"
+  use "numToStr/Comment.nvim"
+  use "akinsho/toggleterm.nvim"
 
   -- Cmp
   use "hrsh7th/nvim-cmp"
@@ -75,6 +82,11 @@ return packer.startup(function(use)
     "nvim-treesitter/nvim-treesitter",
     run = ":TSUpdate",
   }
+  use "JoosepAlviste/nvim-ts-context-commentstring"
+
+  -- Git
+  use "lewis6991/gitsigns.nvim"
+  use "tpope/vim-fugitive"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()
