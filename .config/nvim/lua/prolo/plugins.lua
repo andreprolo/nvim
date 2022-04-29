@@ -6,9 +6,7 @@ if fn.empty(fn.glob(install_path)) > 0 then
   PACKER_BOOTSTRAP = fn.system {
     "git",
     "clone",
-    "--depth",
-    "1",
-    "https://github.com/wbthomason/packer.nvim",
+    "--depth", "1", "https://github.com/wbthomason/packer.nvim",
     install_path,
   }
   print "Installing packer close and reopend Neovim..."
@@ -43,6 +41,7 @@ return packer.startup(function(use)
 
   -- Colorschemes
   use "lunarvim/colorschemes"
+  use "morhetz/gruvbox"
 
   -- General stuff
   use "wbthomason/packer.nvim"
@@ -72,6 +71,13 @@ return packer.startup(function(use)
   -- Lsp
   use "neovim/nvim-lspconfig"
   use "williamboman/nvim-lsp-installer"
+  -- use "OmniSharp/omnisharp-vim"
+
+  -- Vimspector
+  use "puremourning/vimspector"
+
+  -- Coc
+  -- use {'neoclide/coc.nvim', branch = 'master', run = 'yarn install --frozen-lockfile'}
 
   -- Telescope
   use "nvim-telescope/telescope.nvim"

@@ -25,6 +25,8 @@ keymap("n", "<C-Right>", ":vertical resize +2<CR>", opts)
 keymap("n", "<S-h>", ":bprevious<CR>", opts)
 keymap("n", "<S-l>", ":bnext<CR>", opts)
 
+keymap("n", "<S-w>", ":Bdelete<CR>", opts)
+
 -- Quit insert mode faster
 keymap("i", "jk", "<ESC>", opts)
 
@@ -49,10 +51,11 @@ keymap("t", "<C-l>", "<C-\\><C-N><C-w>l", term_opts)
 keymap(
   "n",
   "<leader>f",
-  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown({ previewer = false }))<cr>",
+  -- "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_dropdown())<cr>",
+  "<cmd>lua require'telescope.builtin'.find_files(require('telescope.themes').get_ivy())<cr>",
   opts
 )
-keymap("n", "<C-t>", "<cmd>Telescope live_grep<cr>", opts)
+keymap("n", "<leader>g", "<cmd>Telescope live_grep<cr>", opts)
 
 -- NvimTree
 keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
@@ -60,3 +63,15 @@ keymap("n", "<leader>e", ":NvimTreeToggle<cr>", opts)
 -- Gitsigns
 keymap("n", "gh", ":Gitsigns preview_hunk<cr>", opts)
 
+-- Vimspector
+keymap("n", "<Leader>dd", ":call vimspector#Launch()<CR>", opts)
+keymap("n", "<Leader>de", ":call vimspector#Reset()<CR>", opts)
+keymap("n", "<Leader>dc", ":call vimspector#Continue()<CR>", opts)
+
+keymap("n", "<Leader>dt", ":call vimspector#ToggleBreakpoint()<CR>", opts)
+keymap("n", "<Leader>dT", ":call vimspector#ClearBreakpoints()<CR>", opts)
+
+keymap("n", "<Leader>dk", "<Plug>VimspectorRestart", opts)
+keymap("n", "<Leader>dh", "<Plug>VimspectorStepOut", opts)
+keymap("n", "<Leader>dl", "<Plug>VimspectorStepInto", opts)
+keymap("n", "<Leader>dj", "<Plug>VimspectorStepOver", opts)

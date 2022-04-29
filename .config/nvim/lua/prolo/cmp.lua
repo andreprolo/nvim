@@ -97,7 +97,7 @@ cmp.setup {
       -- vim_item.kind = string.format("%s %s", kind_icons[vim_item.kind], vim_item.kind)
       vim_item.kind = string.format("%s", kind_icons[vim_item.kind])
       vim_item.menu = ({
-        nvim_lsp = "[LSP]",
+        -- nvim_lsp = "[LSP]",
         nvim_lua = "[NVIM_LUA]",
         luasnip = "[Snippet]",
         buffer = "[Buffer]",

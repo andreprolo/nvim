@@ -31,7 +31,8 @@ local options = {
 	signcolumn = "yes",
 	wrap = false,
 	scrolloff = 8,
-	sidescrolloff = 8
+	sidescrolloff = 8,
+  background = "dark"
 }
 
 for k, v in pairs(options) do

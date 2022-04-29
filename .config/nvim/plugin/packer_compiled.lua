@@ -129,6 +129,11 @@ _G.packer_plugins = {
     path = "/home/prolo/.local/share/nvim/site/pack/packer/start/gitsigns.nvim",
     url = "https://github.com/lewis6991/gitsigns.nvim"
   },
+  gruvbox = {
+    loaded = true,
+    path = "/home/prolo/.local/share/nvim/site/pack/packer/start/gruvbox",
+    url = "https://github.com/morhetz/gruvbox"
+  },
   ["nvim-autopairs"] = {
     loaded = true,
     path = "/home/prolo/.local/share/nvim/site/pack/packer/start/nvim-autopairs",
@@ -208,6 +213,11 @@ _G.packer_plugins = {
     loaded = true,
     path = "/home/prolo/.local/share/nvim/site/pack/packer/start/vim-fugitive",
     url = "https://github.com/tpope/vim-fugitive"
+  },
+  vimspector = {
+    loaded = true,
+    path = "/home/prolo/.local/share/nvim/site/pack/packer/start/vimspector",
+    url = "https://github.com/puremourning/vimspector"
   }
 }
 

@@ -12,4 +12,5 @@ require 'prolo.nvim-tree'
 require 'prolo.bufferline'
 require 'prolo.comment'
 require 'prolo.toggleterm'
+require 'prolo.vimspector'
 
