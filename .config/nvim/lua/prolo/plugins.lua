@@ -40,7 +40,7 @@ packer.init {
 return packer.startup(function(use)
 
   -- Colorschemes
-  use "lunarvim/colorschemes"
+  -- use "lunarvim/colorschemes"
   use "morhetz/gruvbox"
 
   -- General stuff
@@ -54,6 +54,8 @@ return packer.startup(function(use)
   use "moll/vim-bbye"
   use "numToStr/Comment.nvim"
   use "akinsho/toggleterm.nvim"
+  use "alvan/vim-closetag"
+  use "tpope/vim-surround"
 
   -- Cmp
   use "hrsh7th/nvim-cmp"
@@ -92,7 +94,7 @@ return packer.startup(function(use)
 
   -- Git
   use "lewis6991/gitsigns.nvim"
-  use "tpope/vim-fugitive"
+  -- use "tpope/vim-fugitive"
 
   if PACKER_BOOTSTRAP then
     require("packer").sync()

@@ -13,4 +13,5 @@ require 'prolo.bufferline'
 require 'prolo.comment'
 require 'prolo.toggleterm'
 require 'prolo.vimspector'
+require 'prolo.closetags'
 
