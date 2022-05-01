@@ -1,5 +1,5 @@
-local dotnet_path = "/home/prolo/.dotnet/dotnet"
-local omnisharp_bin = "/home/prolo/.local/share/nvim/lsp_servers/omnisharp/omnisharp/OmniSharp.dll"
+-- local dotnet_path = "/home/prolo/.dotnet/dotnet"
+-- local omnisharp_bin = "/home/prolo/.local/share/nvim/lsp_servers/omnisharp/omnisharp/OmniSharp.dll"
 
 return {
   -- cmd = { dotnet_path, omnisharp_bin, "--languageserver" , "--hostPID", tostring(vim.fn.getpid()) };

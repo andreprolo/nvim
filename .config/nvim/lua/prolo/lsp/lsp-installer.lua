@@ -29,6 +29,11 @@ lsp_installer.on_server_ready(function(server)
     opts = vim.tbl_deep_extend("force", omnisharp_opts, opts)
   end
 
+  if server.name == "elixirls" then
+    local elixirls_opts = require("prolo.lsp.settings.elixirls")
+    opts = vim.tbl_deep_extend("force", elixirls_opts, opts)
+  end
+
 	server:setup(opts)
 end)
 
