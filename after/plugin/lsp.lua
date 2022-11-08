@@ -116,19 +116,22 @@ local function config(_config)
     }, _config or {})
 end
 
-require("lspconfig").sumneko_lua.setup(config())
+local capabilities = require('cmp_nvim_lsp').default_capabilities()
+
+require("lspconfig").sumneko_lua.setup(config({ capabilities = capabilities }))
 
 require("lspconfig").elixirls.setup(config({
-    cmd = {"/home/prolo/lsp/elixir-ls/language_server.sh"}
+    cmd = {os.getenv("HOME") .. "/lsp/elixir-ls/language_server.sh"},
+    capabilitties = capabilities
 }))
 
-require("lspconfig").ccls.setup(config())
+require("lspconfig").ccls.setup(config({ capabilities = capabilities }))
 
-require("lspconfig").pyright.setup(config())
+require("lspconfig").pyright.setup(config({ capabilities = capabilities }))
 
-require("lspconfig").solargraph.setup(config())
+require("lspconfig").solargraph.setup(config({ capabilities = capabilities }))
 
-require("lspconfig").rust_analyzer.setup(config())
+require("lspconfig").rust_analyzer.setup(config({ capabilities = capabilities }))
 
-require("lspconfig").csharp_ls.setup(config())
+require("lspconfig").csharp_ls.setup(config({ capabilities = capabilities }))
 
