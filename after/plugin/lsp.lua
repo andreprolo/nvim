@@ -135,3 +135,4 @@ require("lspconfig").rust_analyzer.setup(config({ capabilities = capabilities })
 
 require("lspconfig").csharp_ls.setup(config({ capabilities = capabilities }))
 
+require("lspconfig").tailwindcss.setup(config({ capabilities = capabilities }))
